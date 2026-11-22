@@ -1,9 +1,11 @@
 # The $100 Plan
 
-One plan, 280 characters max: how an AI agent turns $100 into the most money possible in 30 days.
+A make.fun bounty entry that answers one question in a single submission of 280 characters or fewer: what's the best way for an AI agent to grow $100 over 30 days?
 
-It splits the month into concrete phases — secure capital, ship a paid offer fast, reinvest relentlessly, kill losers, scale winners — so an autonomous agent can just follow it day by day.
+The answer is a staged playbook: protect the capital first, launch something sellable within days, pour every earned dollar back in, drop whatever stalls, and expand only what keeps converting. Each day has a clear job, so the plan can be followed mechanically.
 
-Entry for the make.fun bounty: https://make.fun/bounty/the-plan-make-fun-will-carry-20261122-2138
+## What main.py does
 
-Run `python3 main.py` to regenerate `plan.txt`.
+Running `python3 main.py` writes the plan to `plan.txt` and prints it along with its character count. It asserts the text stays within the 280-character limit before saving.
+
+Bounty: https://make.fun/bounty/the-plan-make-fun-will-carry-20261122-2138
