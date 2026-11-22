@@ -1,3 +1,5 @@
+import os
+
 plan = (
     "D1-3: bank $100 in USDC; post 3 gigs: 1k-word AI article $25, logo pack "
     "$40, automation setup $75. D4-7: close gig #1, hit $150. "
@@ -9,8 +11,12 @@ text = plan.strip()
 length = len(text)
 assert 1 <= length <= 280, f"plan length {length} out of range"
 
-with open("plan.txt", "w") as f:
+out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
+os.makedirs(out_dir, exist_ok=True)
+out_path = os.path.join(out_dir, "entry.txt")
+with open(out_path, "w") as f:
     f.write(text + "\n")
 
 print(text)
 print(f"chars: {length}")
+print(f"wrote: {out_path}")
