@@ -1,24 +1,29 @@
 #!/usr/bin/env python3
-"""plan1: emit a <=280-char plan turning $100 into max money in 30 days."""
+"""plan1 — emit one <=280-char agent-executable plan: $100 -> max money in 30 days."""
 
 import os
+import sys
 
 PLAN = (
-    "Spend $40 on domain+email. Build a 1-page site selling a $99 "
-    "same-day site-speed fix (Lighthouse audit+minify). Days 2-25: 15 "
-    "cold emails/day to shops with weak Lighthouse scores; $10 for a leads scraper. "
-    "Verify: 3 Stripe sales = $297; reinvest into ads, target $900 day 30."
+    "Day 1: spend $15 on a domain + $20 landing page. Offer $49 Pinterest "
+    "pin packs (10 pins) to Etsy/Shopify sellers, priced $49. Days 2-30: "
+    "deliver in Canva same-day. Verify: Stripe income weekly. Reinvest all "
+    "into 2 repeat clients -> target $1500 by day 30."
 )
 
 
-def emit() -> None:
+def main() -> int:
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
-    text = PLAN.encode("utf-8").decode("utf-8")
-    assert 1 <= len(text) <= 280, f"len={len(text)}"
+    text = PLAN
+    n = len(text)
+    if not (1 <= n <= 280):
+        raise SystemExit(f"plan length {n} outside 1-280")
     with open(os.path.join(out_dir, "entry.txt"), "w", encoding="utf-8") as f:
         f.write(text)
+    print(f"written {n} chars")
+    return 0
 
 
 if __name__ == "__main__":
-    emit()
+    sys.exit(main())
