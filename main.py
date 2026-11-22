@@ -5,10 +5,10 @@ import os
 import sys
 
 PLAN = (
-    "Day 1: spend $15 on a domain + $20 landing page. Offer $49 Pinterest "
-    "pin packs (10 pins) to Etsy/Shopify sellers, priced $49. Days 2-30: "
-    "deliver in Canva same-day. Verify: Stripe income weekly. Reinvest all "
-    "into 2 repeat clients -> target $1500 by day 30."
+    "Day 1: buy $12 domain + $18 Canva Pro; build landing page with Stripe "
+    "checkout listing $49 pin packs (10 pins/brand). Day 2: DM 50 Etsy/Shopify "
+    "sellers, 10/day. Deliver within 24h in Canva. Weekly Stripe check; each "
+    "$49 sale reinvested into ads. Target 30 sales = $1470 by day 30."
 )
 
 
